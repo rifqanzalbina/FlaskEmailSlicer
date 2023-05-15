@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Slicer</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Email Slicer</h1>
+        <form method="POST" action="/">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Enter email address">
+            <button type="submit">Slice</button>
+        </form>
+        {% if username %}
+            <div class="result-container">
+                <p class="result-label">Username:</p>
+                <p class="result">{{ username }}</p>
+            </div>
+            <div class="result-container">
+                <p class="result-label">Domain:</p>
+                <p class="result">{{ domain }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
