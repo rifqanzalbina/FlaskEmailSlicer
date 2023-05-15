@@ -4,7 +4,7 @@
 ## Library That We Use
 - Flask
 
-## Code We Use
+## Program We Use
 - HTML
 - CSS
 - Python 
